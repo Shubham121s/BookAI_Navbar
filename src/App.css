@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+:root {
+  --primary-bg: linear-gradient(135deg, #1e0533, #110a1f);
+  --accent-color: #8a2be2;
+  --text-color: #ffffff;
+  --text-secondary: #b3b3b3;
+  --gradient-1: linear-gradient(45deg, #726bff, #57b6fe);
+  --gradient-2: linear-gradient(45deg, #8a2be2, #4b0082);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  background: var(--primary-bg);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  width: 30px;
+  height: 30px;
+  background: var(--gradient-1);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#auth-button, #profile-button, #logout-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-image: var(--gradient-1);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+#auth-button:hover, #profile-button:hover, #logout-button:hover {
+  background-color: #4338ca;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 300;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--accent-color);
+}
+
+.button {
+  background: var(--gradient-1);
+  color: var(--text-color);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+.book-samples {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.samples-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.book-sample {
+  flex-basis: calc(33.333% - 40px);
+  margin-bottom: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.book-sample:hover {
+  transform: translateY(-10px);
+}
+
+.book-cover-1 {
+  width: 200px;
+  height: 300px;
+  margin: 0 auto 20px;
+  background-image: url("https://raw.githubusercontent.com/adarshagupta/trybookai/main/public-assets/paradox.png");
+  background-position: center;
+  background-size: 100% 100%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: var(--text-color);
+  font-size: 18px;
+  text-align: center;
+  padding: 10px;
+}
+
+.book-cover-2 {
+  width: 200px;
+  height: 300px;
+  margin: 0 auto 20px;
+  background-image: url("https://raw.githubusercontent.com/adarshagupta/trybookai/main/public-assets/mist.png");
+  background-position: center;
+  background-size: 100% 100%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: var(--text-color);
+  font-size: 18px;
+  text-align: center;
+  padding: 10px;
+}
+
+.book-cover-3 {
+  width: 200px;
+  height: 300px;
+  margin: 0 auto 20px;
+  background-image: url("https://raw.githubusercontent.com/adarshagupta/trybookai/main/public-assets/ecos.png");
+  background-position: center;
+  background-size: 100% 100%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: var(--text-color);
+  font-size: 18px;
+  text-align: center;
+  padding: 10px;
+}
+
+.book-excerpt {
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.read-more:hover {
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .book-sample {
+    flex-basis: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .book-sample {
+    flex-basis: 100%;
+  }
+}
+
+.card {
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+
+.newsletter {
+  margin-top: 80px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 40px;
+}
+
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.newsletter input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  width: 60%;
+  max-width: 300px;
+}
+
+.newsletter button {
+  background: var(--gradient-1);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.newsletter button:hover {
+  transform: translateY(-3px);
+}
+
+.newsletter input[type="email"] {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.newsletter button {
+  width: 100%;
+  border-radius: 5px;
+}
+form{
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+
+
+
+
+/* Light Mode */
+:root {
+  --primary-color: #6366f1;
+  --secondary-color: #a5b4fc;
+  --background-color: #ffffff; /* Light background */
+  --text-color: #000000; /* Light text color */
+  --accent-color: #22d3ee;
+  --code-background: #f1f5f9;
+  --section-background: #f1f5f9;
+  --border-color: #d1d5db;
+}
+
+/* Dark Mode */
+.container.dark {
+  --primary-color: #6366f1;
+  --secondary-color: #a5b4fc;
+  --background-color: #0f172a; /* Dark background */
+  --text-color: #e2e8f0; /* Dark text color */
+  --accent-color: #22d3ee;
+  --code-background: #1e293b;
+  --section-background: #1e293b;
+  --border-color: #334155;
+}
+
+/* Apply theme variables */
+body, .container {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+header {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.book-samples, .newsletter {
+  background-color: var(--section-background);
+  border: 1px solid var(--border-color);
+}
+
+/* Additional styles */
+#theme-toggle {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#theme-toggle:hover {
+  background-color: var(--secondary-color);
+}
